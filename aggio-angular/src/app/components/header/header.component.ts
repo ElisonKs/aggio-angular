@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EnderecoService } from 'src/app/services/endereco.service';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  actualPostalCode;
 
-  constructor() { }
+  constructor( private enderecoService:EnderecoService) { }
 
   ngOnInit(): void {
+  }
+
+  inputPostalCode(event)
+  {
+    this.actualPostalCode = event.target.value;
+    this.enderecoService.getEnderecosCep(this.actualPostalCode).subscribe((data)=>{
+      console.log(data);
+    })
   }
 
 }
