@@ -6,7 +6,14 @@
         <img src="../../../assets/img/logo_white.png" >
     </div>
     <div class="header-search">
-        <input type="text" placeholder="Endereço ou código postal" (keyup)="inputPostalCode($event)">
+        <input type="text" mask="99999-999" placeholder="Código postal" (keyup)="inputPostalCode($event)">
+        <div>
+            <div *ngIf="showLoader" class="lds-dual-ring"></div>
+         </div>
     </div>
+    <div class="address_result">{{addressResult}}</div>
+  
+        
+    
 
 </div>
