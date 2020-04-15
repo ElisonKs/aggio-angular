@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
+import { CompaniesComponent } from './components/companies/companies.component';
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
@@ -16,6 +17,7 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     AppComponent,
     HomeComponent,
     HeaderComponent,
+    CompaniesComponent,
     
   ],
   imports: [
