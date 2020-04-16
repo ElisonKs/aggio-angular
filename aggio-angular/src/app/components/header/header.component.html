@@ -3,7 +3,7 @@
         <button class="header-button">Entrar</button>
     </div>
     <div class="header-logo">
-        <img src="../../../assets/img/logo_white.png" >
+        <img src="assets/img/logo_white.png" >
     </div>
     <div class="header-search">
         <input type="text" mask="99999-999" placeholder="Código postal" (keyup)="inputPostalCode($event)">
@@ -13,7 +13,7 @@
     </div>
     <div class="address_result">{{addressResult}}</div>
     <div class="address_continue">
-        <button class="header-button" routerLink="/companies" >Continuar</button>
+        <button *ngIf="showContinueButton" class="header-button" routerLink="/companies" >Continuar</button>
    </div>
         
     

@@ -3,6 +3,8 @@ import { Injectable } from "@angular/core";
 export class Globals {
   
 
-
-public apiUrl = "http://aggio-api-local/api.php";
+//local
+//public apiUrl = "http://aggio-api-local/api.php";
+//prod
+public apiUrl = "http://useaggio.com.br/front/api/api.php";
 }

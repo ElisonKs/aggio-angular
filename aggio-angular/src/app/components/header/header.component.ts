@@ -9,6 +9,7 @@ import { EnderecoService } from 'src/app/services/endereco.service';
 export class HeaderComponent implements OnInit {
   actualPostalCode;
   showLoader:boolean = false;
+  showContinueButton:boolean = false;
   addressResult="";
 
   constructor( private enderecoService:EnderecoService) { }
@@ -25,6 +26,7 @@ export class HeaderComponent implements OnInit {
     this.enderecoService.getAdressesPostalCode(this.actualPostalCode).subscribe((data)=>{
      this.addressResult = data["glo_logradouro_end"] + ", " + data["glo_nome_bai"] + ", " + data["glo_nome_cid"];
       this.showLoader=false;
+      this.showContinueButton = true;
     })
   }
   }
