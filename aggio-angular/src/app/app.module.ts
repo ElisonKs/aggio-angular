@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxMaskModule, IConfig } from 'ngx-mask'
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {Globals} from './globals'
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,10 +25,11 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgxMaskModule.forRoot(options)
+    NgxMaskModule.forRoot(options),
+    NgbModule
    
   ],
   providers: [Globals],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,CompaniesComponent]
 })
 export class AppModule { }

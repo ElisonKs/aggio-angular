@@ -1,1 +1,32 @@
-<p>Aqui vamos mostrar as empresas</p>
+<div class="col-lg-10 col-lg-offset-1">
+  
+<div class="row ">
+    
+    <div class="col-lg-4" *ngFor="let companie of companiesList">
+        <div class="thumbnail fundo_estabelecimentos">
+            <a class="thumbnail"> 
+                <img src={{companie.url_destaque}} style='min-height:160px;height:160px;' />
+            </a>
+            <div class="caption">
+                <h4 class="text-center">{{companie.dlv_nome_emp}}</h4>
+                <h5 class="text-center">Segmento</h5>
+                
+                <p>
+                    <i>
+                        <img alt="" src="assets/img/bola_verde.gif">
+                    </i>
+                    <b>Aberto</b> 
+                    <span class="col-lg-offset-1">
+                        <b>Entrega:</b> R${{companie.dlv_taxaentrega_emp}}/ <i class="fa fa-clock-o"> {{companie.dlv_tempomedio_emp}}</i>
+                    </span>
+                </p>
+                
+                <p>
+                    <a href="" class="btn btn-primary btn-block" role="button">Pedir</a>
+                </p>
+            </div>
+        </div>
+    </div>
+   
+</div>
+</div>
