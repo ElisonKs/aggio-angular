@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { EnderecoService } from 'src/app/services/endereco.service';
 
 @Component({
@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   actualPostalCode;
   showLoader:boolean = false;
   showContinueButton:boolean = false;
+  @Input() showSearch :string
   addressResult="";
 
   constructor( private enderecoService:EnderecoService) { }

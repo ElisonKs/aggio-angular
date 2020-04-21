@@ -2,6 +2,7 @@
     <div class="header-menu">
         <button class="header-button">Entrar</button>
     </div>
+    <div *ngIf="showSearch" class="home-search">
     <div class="header-logo">
         <img src="assets/img/logo_white.png" >
     </div>
@@ -15,7 +16,7 @@
     <div class="address_continue">
         <button *ngIf="showContinueButton" class="header-button" routerLink="/companies" >Continuar</button>
    </div>
-        
+</div>    
     
 
 </div>
