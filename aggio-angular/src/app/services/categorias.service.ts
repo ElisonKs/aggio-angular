@@ -10,18 +10,19 @@ import {Globals} from '../globals'
 @Injectable({
   providedIn: 'root'
 })
-export class CompaniesService {
+export class CategoriasService {
 
   
   constructor(private http:HttpClient,public globals:Globals) { }
 
-  getCompaniesAll()
+  getCategories(empresa_id)
   {
     
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'action': 'get_companies_all',
+        'action': 'get_categories',
+        'empresaId': JSON.stringify(empresa_id)
         
 
       })
@@ -38,7 +39,6 @@ export class CompaniesService {
       catchError(this.handleError));
   }
 
-  
   private handleError(error: HttpErrorResponse) {
     console.log(error);
 

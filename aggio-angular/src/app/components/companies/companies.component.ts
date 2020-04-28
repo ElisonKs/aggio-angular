@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CompaniesService } from 'src/app/services/companies.service';
+import { ActivatedRoute,Router } from '@angular/router';
 
 @Component({
   selector: 'app-companies',
@@ -10,7 +11,7 @@ export class CompaniesComponent implements OnInit {
 
   companiesList = null
 
-  constructor(private companiesService : CompaniesService) { }
+  constructor(private companiesService : CompaniesService, private router:Router) { }
 
   ngOnInit(): void {
     this.get_Companies_All();
@@ -22,4 +23,10 @@ export class CompaniesComponent implements OnInit {
     this.companiesList=data["empresas"]
      })
   }
+
+  navigateToCategories(event,empresa_id)
+  {
+    this.router.navigate(['/categories'], { queryParams: { empresa_id: empresa_id} });
+  }
+
 }
