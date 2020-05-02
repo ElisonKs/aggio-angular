@@ -12,6 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CompaniesComponent } from './components/companies/companies.component';
 import { MinHeaderComponent } from './components/min-header/min-header.component';
 import { CategoryComponent } from './components/category/category.component';
+import { ProductsComponent } from './components/products/products.component';
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
@@ -23,6 +24,7 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     CompaniesComponent,
     MinHeaderComponent,
     CategoryComponent,
+    ProductsComponent,
     
   ],
   imports: [

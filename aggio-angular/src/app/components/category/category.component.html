@@ -1,1 +1,8 @@
-<p>category works!</p>
+<app-header></app-header>
+<div *ngFor="let category of categoriesList">
+    {{category.dlv_descricao_cat}}
+    
+       <app-products [category_id]=category.dlv_id_cat></app-products>
+    
+
+</div>
